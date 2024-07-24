@@ -252,6 +252,11 @@ with col2:
 
 st.markdown("""
     <div style="text-align: center; padding-top: 100px;">
+        <a href="https://github.com/czantoine/Savings-Simulator" target="_blank">
+            <img src="https://img.shields.io/github/stars/czantoine/Savings-Simulator?style=social" alt="Star on GitHub">
+        </a>
+    </div>
+    <div style="text-align: center; padding-top: 20px;">
         <a href="https://www.linkedin.com/in/antoine-cichowicz-837575b1/" target="_blank" style="margin: 0; padding: 0; display: inline-block;">
             <i class="fab fa-linkedin" style="font-size: 30px; margin: 0 10px; color: #A9A9A9; vertical-align: middle;"></i>
         </a>
