@@ -17,6 +17,8 @@ You can access the **Savings Simulator** online without needing to deploy it loc
 
 The **Savings Simulator** is a web application built with Streamlit that helps users visualize the future value of their savings over time. The app allows users to input various parameters, including initial amount, monthly contributions, annual interest rate, duration, entry fees, and management fees, to simulate and visualize how their savings will grow.
 
+![Savings Simulator](./savings-simulator.gif)
+
 ## Features
 
 - **Interactive UI:** Users can adjust simulation parameters using sliders and input fields.
