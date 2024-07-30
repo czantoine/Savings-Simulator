@@ -7,6 +7,8 @@ import plotly.graph_objs as go
 translations = {
     'en': {
         'title': 'Savings Simulator',
+        'other_simulators': 'Other Simulators',
+        'loan_simulator': 'Load Simulator',
         'sidebar_title': 'Simulation Parameters',
         'initial_amount': 'Initial Amount (€)',
         'monthly_contribution': 'Monthly Contribution (€)',
@@ -29,6 +31,8 @@ translations = {
     },
     'fr': {
         'title': 'Simulateur d\'Épargne',
+        'other_simulators': 'Autres Simulateurs',
+        'loan_simulator': 'Simulateur d\'Emprunt',
         'sidebar_title': 'Paramètres de Simulation',
         'initial_amount': 'Montant Initial (€)',
         'monthly_contribution': 'Versement Mensuel (€)',
@@ -155,6 +159,70 @@ lang = st.sidebar.selectbox('Select Language', options=['en', 'fr'])
 trans = get_translations(lang)
 
 st.title(trans['title'])
+
+st.markdown(f"""
+    <style>
+        .header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }}
+        .title {{
+            font-size: 2rem;
+            margin: 0;
+        }}
+        .dropdown {{
+            position: relative;
+            display: inline-block;
+        }}
+        .dropbtn {{
+            background-color:   #0083ff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }}
+        .dropdown-content {{
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+            overflow: hidden;
+        }}
+        .dropdown-content a {{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }}
+        .dropdown-content a:hover {{
+            background-color: #ddd;
+        }}
+        .dropdown:hover .dropdown-content {{
+            display: block;
+        }}
+        .dropdown:hover .dropbtn {{
+            background-color: #00bcff;
+        }}
+    </style>
+    <div class="header">
+        <h2 class="title">{trans['title']}</h2>
+        <div class="dropdown">
+            <button class="dropbtn">{trans['other_simulators']}</button>
+            <div class="dropdown-content">
+                <a href="https://loansimulator.streamlit.app/" target="_blank">{trans['loan_simulator']}</a>
+                <!-- You can add more links here -->
+            </div>
+        </div>
+    </div>
+""", unsafe_allow_html=True)
 
 # Currency selection
 currency_options = {
